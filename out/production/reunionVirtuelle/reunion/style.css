@@ -1,0 +1,45 @@
+.hboxLogin{
+    -fx-background-color: red;
+}
+
+.btn{
+    -fx-background-radius: 35px;
+    -fx-border-radius: 35px;
+    -fx-effect: dropshadow(gaussian, rgb(0.0,0.0,0.0,0.15),6.0,7.7,0.0,1.5);
+    -fx-font-size: 15px;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #fcdfe8ff 0.0%, #b6fefcff 100.0%);
+    -fx-font-weight: BOLD;
+    -fx-text-fill: #00a6ad;
+    -fx-cursor: hand;
+}
+.btn:hover{
+    -fx-text-fill: white;
+    -fx-background-color: #99d1d3;
+}
+.labelDynamic{
+       -fx-font-size: 25px;
+       -fx-font-weight: BOLD;
+       -fx-text-fill: black;
+
+}
+.labelGroupe{
+    -fx-font-size: 15px;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: #0099cc;
+}
+.textArea_message{
+
+     -fx-background-radius: 10px;
+     -fx-border-radius: 10px;
+}
+.reunionSelected:hover{
+    -fx-cursor: hand;
+}
+.btn_inscr:hover{
+    -fx-text-fill: #0000ff;
+    -fx-cursor: hand;
+}
+.btn_inscr{
+    -fx-text-fill: black;
+    -fx-background-color: none;
+}

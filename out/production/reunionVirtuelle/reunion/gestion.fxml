@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="200.0" minWidth="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="589.0" prefWidth="1009.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reunion.gestion">
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" prefHeight="580.0" prefWidth="207.0" style="-fx-background-color: #7388c1; -fx-background-radius: 10;" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="-1.0" prefHeight="118.0" prefWidth="208.0">
+               <children>
+                  <Circle fill="DODGERBLUE" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 17; -fx-font-weight: bold;" text="Ibrahim Soro" textAlignment="JUSTIFY" underline="true" />
+               </children>
+            </VBox>
+            <Separator layoutY="114.0" prefWidth="200.0" style="-fx-background-color: black;" />
+            <HBox alignment="CENTER" layoutY="130.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#nv_reunionButtonClick" prefHeight="32.0" prefWidth="180.0" styleClass="btn" stylesheets="@style.css" text="Nouvelle Reunion" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="182.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#reunionsView" prefHeight="32.0" prefWidth="180.0" styleClass="btn" text="Reunions" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="232.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" styleClass="btn" text="Tchats" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="283.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="180.0" styleClass="btn" text="Reglages" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="386.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#quitter" prefHeight="32.0" prefWidth="180.0" styleClass="btn" text="Quitter" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="333.0" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#deconnection" prefHeight="32.0" prefWidth="180.0" styleClass="btn" text="Deconnection" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+       <HBox alignment="CENTER" layoutX="207.0" layoutY="-2.0" prefHeight="70.0" prefWidth="702.0" visible="false" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <children>
+               <Text fx:id="labelDynamic" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="labelDynamic" text="ACCUEIL" underline="true" />
+           </children>
+       </HBox>
+      <Pane fx:id="paneDynamic1" layoutX="207.0" layoutY="70.0" prefHeight="509.0" prefWidth="695.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <ScrollPane fx:id="scrollpaneReunion" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="509.0" prefWidth="686.0">
+               <content>
+                  <VBox fx:id="paneDynamic1_vbox" pickOnBounds="false" prefHeight="509.0" prefWidth="698.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets left="45.0" />
+               </padding></ScrollPane>
+         </children>
+      </Pane>
+      <Pane fx:id="paneDynamic2" layoutX="204.0" layoutY="70.0" prefHeight="509.0" prefWidth="695.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="109.0" layoutY="24.0" prefHeight="50.0" prefWidth="550.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Libelle">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="libelle" prefHeight="32.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="107.0" layoutY="70.0" prefHeight="50.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="sujet">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="sujet" prefHeight="30.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="128.0" prefHeight="50.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Date de debut">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="date_debut" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="175.0" prefHeight="50.0" prefWidth="550.0" style="-fx-text-fill: #7388c1;">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="120.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Duree prevue">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="duree_prevue" prefHeight="30.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="114.0" layoutY="225.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Ordre du jour" />
+                  <TextField fx:id="ordre_jour" prefHeight="26.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="116.0" layoutY="280.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="97.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Animateur" />
+                  <ComboBox fx:id="animateur" onMouseClicked="#animItems" prefHeight="40.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-familly: Verdana; -fx-fint-size: 15;">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="116.0" layoutY="330.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="147.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Type de reunion" />
+                  <ComboBox fx:id="tp_reunion" onMouseClicked="#typeItems" prefHeight="40.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-familly: Verdana; -fx-fint-size: 15;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Button layoutX="129.0" layoutY="415.0" mnemonicParsing="false" onAction="#creer_reunion" prefHeight="35.0" prefWidth="437.0" style="-fx-font-family: Verdana;" styleClass="btn" text="ENREGISTRER" />
+         </children>
+      </Pane>
+      <Pane fx:id="message" layoutX="223.0" layoutY="70.0" prefHeight="509.0" prefWidth="787.0" style="-fx-border-radius: 7;">
+         <children>
+            <ScrollPane layoutX="10.0" layoutY="24.0" prefHeight="350.0" prefWidth="522.0">
+               <content>
+                  <VBox fx:id="vBoxmessage" prefHeight="349.0" prefWidth="508.0" />
+               </content>
+            </ScrollPane> 
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="377.0" prefHeight="103.0" prefWidth="621.0">
+               <children>
+                  <TextArea fx:id="messageGetText" prefHeight="60.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 1;" styleClass="textArea_message" stylesheets="@style.css" />
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="envoiMessage" mnemonicParsing="false" onAction="#envoi" prefHeight="35.0" prefWidth="176.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-font-family: Verdana; -fx-font-weight: bold; -fx-font-size: 17;" text="Envoyer" textAlignment="CENTER" />
+                        <Button fx:id="demandeParoleButton" mnemonicParsing="false" onAction="#demanderParole" prefHeight="34.0" prefWidth="172.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-font-family: Verdana; -fx-font-weight: bold; -fx-font-size: 17; -fx-background-color: #6699cc;" text="Lever la main" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox fx:id="vBoxMains" layoutX="532.0" layoutY="24.0" prefHeight="350.0" prefWidth="252.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneDetails" layoutX="214.0" layoutY="80.0" prefHeight="509.0" prefWidth="695.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="109.0" layoutY="24.0" prefHeight="50.0" prefWidth="550.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Libelle">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="libelle1" prefHeight="32.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="107.0" layoutY="70.0" prefHeight="50.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="sujet">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="sujet1" prefHeight="30.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="115.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="128.0" prefHeight="50.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Date de debut">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="date_debut1" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="175.0" prefHeight="50.0" prefWidth="550.0" style="-fx-text-fill: #7388c1;">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="120.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Duree prevue">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="duree_prevue1" prefHeight="30.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="114.0" layoutY="225.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Ordre du jour" />
+                  <TextField fx:id="ordre_jour1" prefHeight="26.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="116.0" layoutY="280.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="97.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Animateur" />
+                  <ComboBox fx:id="animateur1" onMouseClicked="#animItems" prefHeight="40.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-familly: Verdana; -fx-fint-size: 15;">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="116.0" layoutY="330.0" prefHeight="40.0" prefWidth="550.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="147.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Type de reunion" />
+                  <ComboBox fx:id="tp_reunion1" onMouseClicked="#typeItems" prefHeight="40.0" prefWidth="252.0" style="-fx-text-fill: #7388c1; -fx-font-familly: Verdana; -fx-fint-size: 15;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+               <Button fx:id="modifierButton" layoutX="129.0" layoutY="415.0" mnemonicParsing="false" onAction="#ModifierReunion" prefHeight="35.0" prefWidth="437.0" style="-fx-font-family: Verdana;" styleClass="btn" text="Modifier" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reunion.Login">
+   <children>
+      <Pane fx:id="pane_login" prefHeight="400.0" prefWidth="600.0">
+         <children>
+             <Text layoutX="240.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+                 <font>
+                     <Font name="Verdana Bold" size="35.0" />
+                 </font>
+             </Text>
+            <HBox alignment="CENTER_LEFT" layoutX="53.0" layoutY="105.0" prefHeight="63.0" prefWidth="500.0" styleClass="hboxLogin">
+               <children>
+                  <Label text="Email">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login" prefHeight="30.0" prefWidth="363.0" style="-fx-background-radius: 7; -fx-border-radius: 7; -fx-font-size: 17;">
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="193.0" prefHeight="63.0" prefWidth="500.0" styleClass="hboxLogin">
+               <children>
+                  <Label text="Password">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pass" prefHeight="30.0" prefWidth="363.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <Button layoutX="65.0" layoutY="286.0" mnemonicParsing="false" onAction="#loginButon" prefHeight="33.0" prefWidth="451.0" style="-fx-font-size: 17; -fx-font-family: Verdana;" styleClass="btn" stylesheets="@style.css" text="Connexion" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="390.0" layoutY="337.0" mnemonicParsing="false" onAction="#p_inscription" style="-fx-border-style: none; -fx-font-size: 15; -fx-font-family: Verdana;" styleClass="btn_inscr" stylesheets="@style.css" text="Inscrivez-vous" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_inscription" prefHeight="406.0" prefWidth="600.0" visible="false">
+         <children>
+            <HBox alignment="CENTER" layoutX="-1.0" prefHeight="73.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription">
+                     <font>
+                        <Font name="Verdana Bold" size="35.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="6.0" layoutY="90.0" prefHeight="50.0" prefWidth="285.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Nom">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nom_insc" prefHeight="30.0" prefWidth="163.0" style="-fx-text-fill: #7388c1;">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="193.0" prefHeight="50.0" prefWidth="285.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Email">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="email_insc" prefHeight="30.0" prefWidth="163.0" style="-fx-text-fill: #7388c1;">
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="277.0" layoutY="92.0" prefHeight="50.0" prefWidth="309.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="115.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Mot de passe">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="pass_insc" prefHeight="30.0" prefWidth="163.0" style="-fx-text-fill: #7388c1;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="6.0" layoutY="140.0" prefHeight="50.0" prefWidth="285.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="71.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Prenom">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="prenom_insc" prefHeight="30.0" prefWidth="163.0" style="-fx-text-fill: #7388c1;">
+                     <HBox.margin>
+                        <Insets left="17.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="278.0" layoutY="145.0" prefHeight="50.0" prefWidth="309.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label prefHeight="19.0"
+                         prefWidth="114.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Confirmer">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="conf_insc" prefHeight="30.0" prefWidth="163.0" style="-fx-text-fill: #7388c1;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="277.0" layoutY="185.0" prefHeight="50.0" prefWidth="309.0" style="-fx-text-fill: #7388c1; -fx-font-family: Verdana; -fx-font-size: 15; -fx-font-weight: bold;">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="57.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-text-fill: #103667; -fx-font-family: Verdana;" text="Photo">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#choisir_photo" text="Choisir une image">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Button layoutX="82.0" layoutY="321.0" mnemonicParsing="false" onAction="#inscription" prefHeight="35.0" prefWidth="437.0" style="-fx-font-family: Verdana;" styleClass="btn" stylesheets="@style.css" text="ENREGISTRER" />
+            <Button layoutX="380.0" layoutY="369.0" mnemonicParsing="false" onAction="#se_connecter" style="-fx-border-style: none; -fx-font-size: 15; -fx-font-family: Verdana;" styleClass="btn_inscr" stylesheets="@style.css" text="Se connecter" />
+            <ImageView fx:id="photo" fitHeight="79.0" fitWidth="118.0" layoutX="439.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
